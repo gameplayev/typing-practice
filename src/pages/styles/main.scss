@@ -2,10 +2,15 @@
 .nav{
     display: flex;
     align-items: center;
+    justify-content: space-around;
+    margin-top: 2.5vh;
 }
 
 .nav-left{
-
+    span{
+        font-size: 16px;
+        font-weight: 550;
+    }
 }
 
 .nav-right{
@@ -17,6 +22,7 @@
         }
     }
     a{
+        margin-left: 2vw;
         font-size: 16px;
         text-decoration: none;
         color: black;
@@ -27,5 +33,88 @@
     }
 }
 
+.main-typing {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 20vh;
+    border-top: 0.5px solid black;
+    border-bottom: 0.5px solid black;
+    width: 58vw;
+    height: 50vh;
+    justify-self: center;
+}
 
+.backText-container {
+    flex-wrap: wrap;            
+    overflow-y: scroll;          
+    width: 58vw;
+    height: 50vh;
+    padding: 0;
+    outline: none;
+    
+}
 
+.backText {
+    display: inline-flex;        
+    font-size: 22px;
+    min-width: 1vw;
+    color: #999;  
+    outline: gray;
+    white-space: nowrap;    
+    margin-top: 0.5vh;
+    &:hover{
+        cursor:default;
+    }
+}
+
+@keyframes blink-border {
+  0% {
+    border-left-color: white;
+  }
+  25%{
+    border-left-color: black;
+  }
+  50% {
+    border-left-color: white; 
+  }
+  75%{
+    border-left-color: black;
+  }
+  100% {
+    border-left-color: white;
+  }
+}
+
+.backText-cur{
+    border-left: 2px solid black;
+    display: inline-flex;        
+    font-size: 22px;
+    min-width: 1vw;
+    color: #999;  
+    outline: gray;
+    white-space: nowrap;    
+    margin-top: 0.5vh;
+    animation: blink-border 2.5s infinite;
+    &:hover{
+        cursor:default;
+    }
+}
+
+.main-info {
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: flex-start;
+    margin-left: 22vw;
+    margin-top: 2vh;
+    span:first-of-type{
+        font-size: 18px;
+    }
+    span:last-of-type{
+        margin-top: -1.7vh;
+        font-size: 15px;
+    }
+    
+  }
+  
