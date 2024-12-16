@@ -1,4 +1,6 @@
 
+
+
 .nav{
     display: flex;
     align-items: center;
@@ -14,14 +16,14 @@
 }
 
 .nav-right{
-    span{
+    span:first-of-type{
         font-size: 16px;
         &:hover{
             cursor: pointer;
             font-weight: bold;
         }
     }
-    a{
+    span:last-of-type{
         margin-left: 2vw;
         font-size: 16px;
         text-decoration: none;
@@ -38,68 +40,13 @@
     justify-content: center;
     align-items: flex-start;
     margin-top: 20vh;
-    border-top: 0.5px solid black;
-    border-bottom: 0.5px solid black;
+    
     width: 58vw;
     height: 50vh;
     justify-self: center;
 }
 
-.backText-container {
-    flex-wrap: wrap;            
-    overflow-y: scroll;          
-    width: 58vw;
-    height: 50vh;
-    padding: 0;
-    outline: none;
-    
-}
 
-.backText {
-    display: inline-flex;        
-    font-size: 22px;
-    min-width: 1vw;
-    color: #999;  
-    outline: gray;
-    white-space: nowrap;    
-    margin-top: 0.5vh;
-    &:hover{
-        cursor:default;
-    }
-}
-
-@keyframes blink-border {
-  0% {
-    border-left-color: white;
-  }
-  25%{
-    border-left-color: black;
-  }
-  50% {
-    border-left-color: white; 
-  }
-  75%{
-    border-left-color: black;
-  }
-  100% {
-    border-left-color: white;
-  }
-}
-
-.backText-cur{
-    border-left: 2px solid black;
-    display: inline-flex;        
-    font-size: 22px;
-    min-width: 1vw;
-    color: #999;  
-    outline: gray;
-    white-space: nowrap;    
-    margin-top: 0.5vh;
-    animation: blink-border 2.5s infinite;
-    &:hover{
-        cursor:default;
-    }
-}
 
 .main-info {
     display: flex;
@@ -118,3 +65,141 @@
     
   }
   
+  .backText-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;    
+    border-top: 0.4px solid black;
+    border-bottom: 0.4px solid black;
+    width: 58vw;
+    height: 50vh;
+    padding: 0;
+    outline: none;
+    user-select: none;
+    .backText{
+        justify-self: center;
+        font-size: 28px;
+        margin-top: 4.5vh;
+    }
+    textarea{
+        all: unset;
+        user-select: none; 
+        -webkit-user-select: none; 
+        -moz-user-select: none;
+        -ms-user-select: none; 
+        cursor: default;
+        display: flex;
+        margin-top: 6vh;
+        font-size: 20px;
+        border-bottom: solid black;
+        height: 3.56vh;
+        width: 50vw;
+        padding: 0;
+        text-align: center;
+    }
+    
+}
+.main-consequence{
+    position: absolute;
+    border: 0.8px solid black;
+    padding: 1vh;
+    height: 16vh;
+    margin-top: 5vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    width: 23vw;
+    div{
+        position: absolute;
+        margin-top: -14vh;
+        margin-left: 21vw;
+        &:hover{
+            cursor: pointer;
+            background-color: #999;
+            border-radius: 50%;
+            svg{
+                padding: 0.2vh;
+            }
+        }
+    }
+}
+.hidden{
+    display: none !important;
+}
+
+.main-con-item:first-of-type{
+    position: absolute;
+    font-size: 22px;
+    margin-top: -11vh;
+}
+
+.main-con-item:nth-of-type(2){
+    margin-top: 10vh;
+    width: 32vw;
+    height: 6vh;
+    text-align: center;
+    span:last-of-type{
+        margin-left: 1.5vh;
+    }
+}
+.main-con-item:last-of-type{
+    display: flex;
+    justify-content: center;
+    span{
+        margin-left: 1vh;
+    }
+}
+
+
+
+.main-timer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    margin-top: -4vh;
+    span{
+        margin-left: 2vw;
+        border: none;
+        outline: none;
+        &:hover{
+            cursor: pointer;
+            font-weight: bold;
+        }
+    }
+}
+.main-select{
+    background-color: white;
+    position: absolute;
+    margin-left: 44.3vw;
+    margin-top: 20vh;
+    border: 0.8px solid black;
+    height: 14vh;
+    width: 10vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2vh;
+    span:first-of-type{
+        position: absolute;
+        margin-top: -12vh;
+        margin-left: 8vw;
+        &:hover{
+            background-color: #999;
+            cursor: pointer;
+            border-radius: 50%;
+        }
+        svg{
+            padding: 2px;
+            height: 20px;
+            width: 24px;
+        }
+    }
+    select{
+        margin-top: 2vh;
+    }
+}

@@ -1,8 +1,7 @@
 import './App.scss';
-import { useState } from 'react';
-import { Routes, Route, Link, Navigate} from 'react-router-dom';
+import { Routes, Route, Navigate} from 'react-router-dom';
 import Main from './pages/main.js';
-import Setting from './pages/setting.js';
+
 
 const App= () => {
   return (
@@ -10,7 +9,6 @@ const App= () => {
       <Routes>
         <Route path='/' element={<Navigate to = "/main" replace/>} />
         <Route path='/main' element= {<Main/>} />
-        <Route path='/setting' element= {<Setting/>} />
       </Routes>
     </div>
   );
